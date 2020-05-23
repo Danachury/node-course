@@ -1,0 +1,22 @@
+extends ./layout.pug
+
+block content
+    div(class='col-md-2 remove-float center-block big-top-space')
+        form(action='/register', method='POST')
+            div.form-group
+                label(for='username') Username
+                input.form-control(id='username', type='text', name='username', placeholder='Username')
+            div.form-group
+                label(for='email') Email
+                input.form-control(id='email', type='email', name='email', placeholder='Email')
+            div.form-group
+                label(for='password') Password
+                input.form-control(id='password', type='password', name='password', placeholder='Password')
+            div.form-group
+                label(for='passwordConfirmation') Confirm Password
+                input.form-control(id='passwordConfirmation', type='password', name='passwordConfirmation', placeholder='Password Confirmation')
+            div.row.top-space
+                div(class='col-xs-12 col-sm-6')
+                    input.btn.btn-info(type='submit', value='Register')
+                div(class='col-xs-12 col-sm-6 text-right')
+                    a(href='/login') I have an account

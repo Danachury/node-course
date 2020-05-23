@@ -1,0 +1,15 @@
+extends ../../layout.pug
+
+block content
+    div(class='col-md-6 remove-float center-block big-top-space')
+        h1 Edit Image
+        form(action='/app/images', method='POST')
+            div.form-group
+                label(for='title') Title
+                input.form-control(id='title', type='text', name='title', placeholder='Image Title', value=image.title)
+            div.form-group
+                label(for='file') Image File
+                input.form-control(id='file', type='file', name='file')
+            div.row.top-space
+                div(class='col-xs-12 col-sm-6')
+                    input.btn.btn-info(type='submit', value='Save')

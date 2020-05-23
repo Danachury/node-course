@@ -1,0 +1,13 @@
+extends ../../layout.pug
+
+block content
+    div.container
+        h1 My Images
+        for image in images
+            div.white.border.tr.large-padding
+                div.row
+                    div.col-md-10
+                        h2=image._id
+                    div.col-md-2
+                        a.right-space(href='/app/images/#{image._id}/edit') Edit
+                        a.right-space(href='/app/images/#{image._id}/') Delete

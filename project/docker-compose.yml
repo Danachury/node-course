@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    tty: true
+    volumes:
+      - ./resources/mongodb:/docker-entrypoint-initdb.d
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: easy
+      MONGO_INITDB_ROOT_PASSWORD: easy
+      MONGO_INITDB_DATABASE: easy

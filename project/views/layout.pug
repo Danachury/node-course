@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+    head
+        title Easy Photo
+        meta(charset='UTF-8')
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/static/css/app.css')
+    body.col-md-12
+        nav(class='large-padding black white-text')
+            ul
+                li
+                    a(href='/app') Home
+                li
+                    a(href='/app/images') My Images
+        block content
